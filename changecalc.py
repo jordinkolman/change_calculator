@@ -55,6 +55,10 @@ def changeCalcv2():
         if payment > 100:
             print("Error: Payment is too high. ")
             break
+        #throw error if customer pays less than total 
+        if payment < total:
+            print("Error: Payment is not enough")
+            break
         # calculate the change owed to customer
         change = round((payment - total), 2)
         print("Your change is: " + str(change))
